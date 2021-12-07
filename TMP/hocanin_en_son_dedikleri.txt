@@ -1,0 +1,25 @@
+yöneticiler olacak onlar için ikilik sayı sistemi kullanarak yetkilendirmeler ver, hoca ile beraber yapacağız o kısmı
+
+login işlemleri kontrol edilecek, kendi algoritmamızı oluşturacağız, json web token ilk başta kullanmayacağız. key, access token, expires time kısımlarını da dikkate almak lazım
+
+user tablom olacak onda yine yetkilendirmeler olacak -> yazar için
+
+haberler:
+  kategori yapısı olacak, kategori yapısı olacak, 
+  kategorilere içerik eklenebilecek, yönetimden eklerken kullanıcı seçimi olabilecek, user tarafından ise girişi yapan user'ın adı olacak.
+
+  içerik tipi diye bir alanımız olacak. bunun tipi videodur ya da resimdir falan kısımlarından tabloları ona göre yapılacak,
+
+  yorumlar bir tabloda tutalacak, arşiv kısmı eklenecek, favori kısımları eklenebilecek
+  favorileri herkes görebilecek, arşivleri sadece kendisi görebilecek, 
+
+  genel ayarlar olacak, title, descriptin vs kısımları.
+
+  mail tablosu olacak, mailin gönderileceği kişiler mailin içi, mesaj tablosu olacak, site içinde bize gönderilen mesajları tutacağız ve gerekirse cevaplayacağız. haberden mi geliyor feedback'den mi geliyor o kısımları ayırmak gerekecek
+
+
+  resim kütüp gerekecek. s, m, b, original boyutunda olacak, jimp kütüphanesi kullanılacak resimler için 4 farklı boyuttaki resimleri de db'de tutacağız
+
+  arama kısımlarını nasıl yapacağız, string araması olmasını istemiyormuş hoca
+
+  kategorilerin title, description ve resimleri olacak 
