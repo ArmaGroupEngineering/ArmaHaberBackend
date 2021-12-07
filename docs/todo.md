@@ -12,18 +12,18 @@
   - Yöneticiler olacak, içerik üreticileri olacak, okuyucular olacak
   - Bunların her birine verilecek olan yetkilendirmeler bitwise sistemi kullanılarak olacak
 
-- Haberler Tablosu:
+**Haberler Tablosu:**
 
-  - Haberler için kategori, içerik, video, resim, yorum tabloları olacak
-  - İçerik tipi diye bir alanımız olacak o alana göre join kısımlarını bağlayacağız
+- Haberler için kategori, içerik, video, resim, yorum tabloları olacak
+- İçerik tipi diye bir alanımız olacak o alana göre join kısımlarını bağlayacağız
 
-- Mail Tablosu:
+**Mail Tablosu:**
 
-  - Mail gönderme sistemine abone olmuş kişilerin kişisel bilgileri, gönderilecek olan mail metni olacak o metin mail template'ine entegre edilecek
+- Mail gönderme sistemine abone olmuş kişilerin kişisel bilgileri, gönderilecek olan mail metni olacak o metin mail template'ine entegre edilecek
 
-- Mesaj Tablosu:
+**Mesaj Tablosu:**
 
-  - Site içinden gönderilen mesajların, haberlere yapılan yorumların, feedbacklerin tutulacağı tablolar olması gerekiyor.
+- Site içinden gönderilen mesajların, haberlere yapılan yorumların, feedbacklerin tutulacağı tablolar olması gerekiyor.
 
 **ÖNEMLİ!**
 
