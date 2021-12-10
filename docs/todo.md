@@ -29,3 +29,21 @@
 
 - Arama kısmını iyi araştırmak lazım, string araması olmasını istemiyormuş hoca (?)
 - Resimler üzerinden işlem yapabilmek için _Jimp_ isimli kütüphane kullanılabilir. Resim boyutları için S, M, B, Orjinal olmak üzere 4 varyant resimler tablosunda tutulacak
+
+
+
+hocanın dedikleri:
+
+  resimler tek bir klasöre kaydet
+  small big vs olarak
+  resimlerin pathleri için tablo oluşturmaya gerek yok
+  haber detaylı ve resim embedded kısmı aynı tabloda olacak
+
+  listelemede kullanmadığımız tüm alanları oraya haber detayı içine koyacğız
+
+  ÇOKLU RESİM OLAYI YOKKK !!!
+
+  galeri kısmında birden fazla resim olacak o kısımda da zaten detay kısmı olacak herhangi bir çağırma işlemi burada olmayacak
+
+  haber detayında spot alan olacak o kısımda da haberin kısa detayı olacak. o da haber kalın harfle yazılmış olan kısım orası olacak shiftdelete deki gibi
+

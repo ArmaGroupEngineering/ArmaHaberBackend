@@ -1,0 +1,77 @@
+yöneticiler olacak onlar için ikilik sayı sistemi kullanarak yetkilendirmeler ver, hoca ile beraber yapacağız o kısmı
+
+login işlemleri kontrol edilecek, kendi algoritmamızı oluşturacağız, json web token ilk başta kullanmayacağız. key, access token, expires time kısımlarını da dikkate almak lazım
+
+user tablom olacak onda yine yetkilendirmeler olacak -> yazar için
+
+haberler:
+  kategori yapısı olacak, kategori yapısı olacak, 
+  kategorilere içerik eklenebilecek, yönetimden eklerken kullanıcı seçimi olabilecek, user tarafından ise girişi yapan user'ın adı olacak.
+
+  içerik tipi diye bir alanımız olacak. bunun tipi videodur ya da resimdir falan kısımlarından tabloları ona göre yapılacak,
+
+  yorumlar bir tabloda tutalacak, arşiv kısmı eklenecek, favori kısımları eklenebilecek
+  favorileri herkes görebilecek, arşivleri sadece kendisi görebilecek, 
+
+  genel ayarlar olacak, title, descriptin vs kısımları.
+
+  mail tablosu olacak, mailin gönderileceği kişiler mailin içi, mesaj tablosu olacak, site içinde bize gönderilen mesajları tutacağız ve gerekirse cevaplayacağız. haberden mi geliyor feedback'den mi geliyor o kısımları ayırmak gerekecek
+
+
+  resim kütüp gerekecek. s, m, b, original boyutunda olacak, jimp kütüphanesi kullanılacak resimler için 4 farklı boyuttaki resimleri de db'de tutacağız
+
+  arama kısımlarını nasıl yapacağız, string araması olmasını istemiyormuş hoca
+
+  kategorilerin title, description ve resimleri olacak 
+
+**** 9.12.2021 - perşembe
+
+  user's archive table: içerik id'si status alacağız. idler üzerinden favoriler beğenilenler falan olarak eklenecek
+
+  feedback tablosu için:  anonim kullanıcılar için araştırmalar yap
+
+  type için bir alan olacak tüm alanlar için type üzerinden işlem yap bu bize birden fazla table oluşturma olayını ortadan kaldırabilir
+
+  mesajlar için geldiği kısmı ekleyerek işlem yapmalıyız
+
+  mailler üzerinden kullanıcı ayarları olacak, günlük aylık, seçtiği haberler, seçtiği kelimeler olacak onlara göre bu haberleri bu adama mail olarak yollayacağız
+
+  subscription mail table yerine user mail settings tablosu oluşturulması gerekiyor
+
+  resimler için ayrı tablo oluştur, iki tane column olacak resim ve içeriği içerek, haberin unique id'si üzerinden işlem yapılacak
+  
+  #NOW: her işlemde modelleme gerekiyor, tablodan çekilen her veriyi modelden geçirmemiz gerekiyor.
+
+  #NOW: prototype'ları iyi bilin.
+
+  #NOW: yarın objeler, referanslar ile ilgili soru soracakmış... ben mezun olduk sanıyordum 🥲. !!!!!!
+  en büyük sorunlar referansı koparmak kısmında oluyor
+
+
+*** 12-10-2021
+
+  eğer kullanıcı authenticate değilse direkt olarak adı soyadı email telefon numarası sütunlarına alırız
+  settings kısmında kullanıcıdan tagler alınacak, kategoriler alınacak ona göre maillerin seçenekleri belirlenecek
+  haber id değil içerik id
+
+  HABER DEĞİL İÇERİK
+
+  history table üzerinden eğer tek bir haberi birden fazla kullanıcılar eklerse tablo şişer
+  haber id'leri içerik id olarak değiştir
+
+  user ve admin giriş sayfaları çok farklı yerler olacak
+  user eğer kullanıcı olmak isterse normal tablodan hesap açacak ikisi kesinlikle AYRI
+
+  backend kısmının promise lara iyi bakması lazım async işlemleri yapmayı iyi öğrenmemiz lazım
+
+  haberlerin sıralaması yine bizim işimiz onlara puanlama gibi kısımlar olacak sanırım (?) puana göre olabilir, eklenen süreye göre olabilir, içeriğe göre olacak
+
+  kullanıcıların birbiri ile mesajlanması kısmı sonradan eklenecek
+
+  database bittikten sonra:
+    akış diyagramı hazırlanacak haftaya, en küçük fonksiyonun bile akış diyagramı olacak. ÇOK DÜZGÜN OLMALI
+    her senaryo ayrı olacak. diyagramlar ayrı ayrı olacak
+
+    fastify'da cors olaylarına bakın
+    her gün bir tane tablonun akış diyagramını çıkar
+
