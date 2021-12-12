@@ -1,0 +1,1 @@
+nodemailer kullanarak mail yollama kısmında sıkıntılar var, mail yollama işlemini halledemedim bir türlü

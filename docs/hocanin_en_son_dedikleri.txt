@@ -64,7 +64,7 @@ haberler:
 
   backend kısmının promise lara iyi bakması lazım async işlemleri yapmayı iyi öğrenmemiz lazım
 
-  haberlerin sıralaması yine bizim işimiz onlara puanlama gibi kısımlar olacak sanırım (?) puana göre olabilir, eklenen süreye göre olabilir, içeriğe göre olacak
+  # IMPORTANT: haberlerin sıralaması yine bizim işimiz onlara puanlama gibi kısımlar olacak sanırım (?) puana göre olabilir, eklenen süreye göre olabilir, içeriğe göre olacak
 
   kullanıcıların birbiri ile mesajlanması kısmı sonradan eklenecek
 

@@ -1,0 +1,8 @@
+- kendimize mail şablonları oluştur, password reset için hoşgeldiniz, maile haberleri abonelik gibi göndermek için
+
+- db'den hiçbir zaman veri silinmez, aktif pasif
+
+## veritabanında olması gereken tablolar
+ - user (yazar yetkisi, admin etkisi, sadece yazabilir, sadece silebilir, gibi yetkinlikler eklenmeli ve hepsi de tek bir column içinde olacak, eğer 32'den büyükse iki column olacak.), haber, galery, video, category, özel tanıtım sayfaları olacak, yönetimden menuyu oluşturabileceğim. slider'i da menuden özel olarak seçebileyim.
+
+- joinler vs gibi alanlarda araştırmalar yapmak gerekli tablolar üzerinden birleştirmeler çok olacak çünkü

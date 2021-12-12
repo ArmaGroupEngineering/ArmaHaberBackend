@@ -1,0 +1,32 @@
+{
+  "name": "structurecode2",
+  "version": "1.0.0",
+  "description": "Struct App for Future Use",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fastifydev": "nodemon fastify_exmp/server.js",
+    "knexdev": "nodemon knex_exmp/server.js",
+    "mailerdev": "nodemon mailer_exmp/server.js",
+    "jsonwebtokendev": "nodemon jsonwebtoken_exmp/server.js",
+    "jimpdev": "nodemon jimp_exmp/server.js"
+  },
+  "author": "Yusuf Berkay Girgin",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "fastify": "^3.24.1",
+    "fastify-jwt": "^4.1.0",
+    "fastify-nodemailer": "^5.0.0",
+    "fastify-static": "^4.5.0",
+    "handlebars": "^4.7.7",
+    "jimp": "^0.16.1",
+    "knex": "^0.95.14",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
+    "point-of-view": "^4.15.3"
+  }
+}
