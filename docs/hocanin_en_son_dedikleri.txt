@@ -76,5 +76,5 @@ haberler:
     her gün bir tane tablonun akış diyagramını çıkar
 
 13.12.2021 kendi notlarımız:
-  kategoriden sonra haber türü tablosu oluşturmak daha sonra habere çıkartırsak daha mantıklı olur
-  mesajlar için subject kısmı eklenecek
+  + kategoriden sonra haber türü tablosu oluşturmak daha sonra habere çıkartırsak daha mantıklı olur
+  + mesajlar için subject kısmı eklenecek
