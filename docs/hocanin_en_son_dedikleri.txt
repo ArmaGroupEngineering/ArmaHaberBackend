@@ -78,3 +78,22 @@ haberler:
 13.12.2021 kendi notlarımız:
   + kategoriden sonra haber türü tablosu oluşturmak daha sonra habere çıkartırsak daha mantıklı olur
   + mesajlar için subject kısmı eklenecek
+
+
+  login kısmını hallet, password unutulursa nasıl olacak o kısmı hallet
+  şifremi unuttum kısmı için token için verilecek olan süreyi de db de tut
+  eksiklikler varsa onlar sonradan halledilebilir
+
+
+
+  kişi başı olarak bölüş akış şemalarını
+
+
+  kullanıcı kısmı bittikten sonra, içerik ekleme kısmına geç
+  akış şemalarını insert, delete, update gibi CRUD işlemleri için özellikleri ayrı ayrı göz önünde bulundurarak yapmak çok daha mantıklı
+  fastify prehandler olayını araştır
+  migrations hazırlayabiliyorsak çok daha rahat olur knex migration yapıları, herkes kendi kafasındaki yapıları kursun, 
+
+  çarşambaya kadar rest client yapısı oluşturmaya çalış herkes kendi yapısını kursun
+
+
