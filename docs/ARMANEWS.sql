@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Anamakine: 127.0.0.1
--- Üretim Zamanı: 14 Ara 2021, 12:41:43
--- Sunucu sürümü: 10.4.22-MariaDB
--- PHP Sürümü: 8.0.13
+-- Host: localhost
+-- Generation Time: Dec 15, 2021 at 08:16 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Veritabanı: `database`
+-- Database: `ARMANEWS`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -44,7 +44,7 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `adminhistory`
+-- Table structure for table `adminhistory`
 --
 
 CREATE TABLE `adminhistory` (
@@ -57,7 +57,7 @@ CREATE TABLE `adminhistory` (
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `category`
+-- Table structure for table `category`
 --
 
 CREATE TABLE `category` (
@@ -66,7 +66,7 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Tablo döküm verisi `category`
+-- Dumping data for table `category`
 --
 
 INSERT INTO `category` (`ID`, `name`) VALUES
@@ -77,7 +77,7 @@ INSERT INTO `category` (`ID`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `comment`
+-- Table structure for table `comment`
 --
 
 CREATE TABLE `comment` (
@@ -93,7 +93,7 @@ CREATE TABLE `comment` (
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `gallery`
+-- Table structure for table `gallery`
 --
 
 CREATE TABLE `gallery` (
@@ -107,7 +107,7 @@ CREATE TABLE `gallery` (
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `mailsubscription`
+-- Table structure for table `mailsubscription`
 --
 
 CREATE TABLE `mailsubscription` (
@@ -121,7 +121,7 @@ CREATE TABLE `mailsubscription` (
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `media`
+-- Table structure for table `media`
 --
 
 CREATE TABLE `media` (
@@ -134,7 +134,7 @@ CREATE TABLE `media` (
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `messages`
+-- Table structure for table `messages`
 --
 
 CREATE TABLE `messages` (
@@ -152,7 +152,7 @@ CREATE TABLE `messages` (
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `messagetype`
+-- Table structure for table `messagetype`
 --
 
 CREATE TABLE `messagetype` (
@@ -163,7 +163,7 @@ CREATE TABLE `messagetype` (
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `news`
+-- Table structure for table `news`
 --
 
 CREATE TABLE `news` (
@@ -175,14 +175,21 @@ CREATE TABLE `news` (
   `summary` text NOT NULL COMMENT 'Summary',
   `authorID` int(11) NOT NULL COMMENT 'Author ID',
   `createdAt` datetime NOT NULL COMMENT 'Created At',
-  `Edited At` datetime NOT NULL COMMENT 'Edited At',
+  `editedAt` datetime NOT NULL COMMENT 'Edited At',
   `isActive` tinyint(1) NOT NULL COMMENT 'New Status'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `news`
+--
+
+INSERT INTO `news` (`ID`, `categoryID`, `typeID`, `title`, `image`, `summary`, `authorID`, `createdAt`, `editedAt`, `isActive`) VALUES
+(1, 1, 1, 'MAX BU KEZ BASARDI!!', '/path/to/image.png', 'F1 Yarismasini galibi Max oldu. Son virajda Hamilton\'i gecen max verstappen 2 milisaniye gibi bir farkla dünya sampiyonu olmayi hak kazandi. Kendisini tebrik ediyoruz..', 1, '2021-12-15 07:58:55', '2021-12-15 07:58:55', 1);
 
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `newstype`
+-- Table structure for table `newstype`
 --
 
 CREATE TABLE `newstype` (
@@ -191,7 +198,7 @@ CREATE TABLE `newstype` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Tablo döküm verisi `newstype`
+-- Dumping data for table `newstype`
 --
 
 INSERT INTO `newstype` (`ID`, `type`) VALUES
@@ -201,7 +208,7 @@ INSERT INTO `newstype` (`ID`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -219,10 +226,17 @@ CREATE TABLE `user` (
   `isActive` tinyint(1) NOT NULL COMMENT 'Is User Account Active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`ID`, `firstName`, `lastName`, `username`, `email`, `password`, `joinedAt`, `token`, `expiresAt`, `permissions`, `tags`, `isActive`) VALUES
+(1, 'Yusuf Berkay', 'Girgin', 'ybgirgin', 'ybgirgin@armagroupholding.com', 'ybgirgin123', '2021-12-15 07:57:00', '1!+^%\'jhaskhr18134kgakghfkfljg', '2021-12-15 07:57:00', 0x0111110000000000000000000000000000000000000000000000000000000000, 'spor', 1);
+
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `usersarchive`
+-- Table structure for table `usersarchive`
 --
 
 CREATE TABLE `usersarchive` (
@@ -233,17 +247,17 @@ CREATE TABLE `usersarchive` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dökümü yapılmış tablolar için indeksler
+-- Indexes for dumped tables
 --
 
 --
--- Tablo için indeksler `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Tablo için indeksler `adminhistory`
+-- Indexes for table `adminhistory`
 --
 ALTER TABLE `adminhistory`
   ADD PRIMARY KEY (`ID`),
@@ -251,14 +265,14 @@ ALTER TABLE `adminhistory`
   ADD KEY `newsID` (`newsID`);
 
 --
--- Tablo için indeksler `category`
+-- Indexes for table `category`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `Name` (`name`);
 
 --
--- Tablo için indeksler `comment`
+-- Indexes for table `comment`
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`ID`),
@@ -266,28 +280,28 @@ ALTER TABLE `comment`
   ADD KEY `authorID` (`authorID`);
 
 --
--- Tablo için indeksler `gallery`
+-- Indexes for table `gallery`
 --
 ALTER TABLE `gallery`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `newsID` (`newsID`);
 
 --
--- Tablo için indeksler `mailsubscription`
+-- Indexes for table `mailsubscription`
 --
 ALTER TABLE `mailsubscription`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `userID` (`userID`);
 
 --
--- Tablo için indeksler `media`
+-- Indexes for table `media`
 --
 ALTER TABLE `media`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `newsID` (`newsID`);
 
 --
--- Tablo için indeksler `messages`
+-- Indexes for table `messages`
 --
 ALTER TABLE `messages`
   ADD PRIMARY KEY (`ID`),
@@ -296,13 +310,13 @@ ALTER TABLE `messages`
   ADD KEY `typeID` (`typeID`);
 
 --
--- Tablo için indeksler `messagetype`
+-- Indexes for table `messagetype`
 --
 ALTER TABLE `messagetype`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Tablo için indeksler `news`
+-- Indexes for table `news`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`ID`),
@@ -311,20 +325,20 @@ ALTER TABLE `news`
   ADD KEY `authorID` (`authorID`);
 
 --
--- Tablo için indeksler `newstype`
+-- Indexes for table `newstype`
 --
 ALTER TABLE `newstype`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `Type` (`type`);
 
 --
--- Tablo için indeksler `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Tablo için indeksler `usersarchive`
+-- Indexes for table `usersarchive`
 --
 ALTER TABLE `usersarchive`
   ADD PRIMARY KEY (`ID`),
@@ -332,132 +346,132 @@ ALTER TABLE `usersarchive`
   ADD KEY `newsID` (`newsID`);
 
 --
--- Dökümü yapılmış tablolar için AUTO_INCREMENT değeri
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Tablo için AUTO_INCREMENT değeri `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'User ID';
 
 --
--- Tablo için AUTO_INCREMENT değeri `adminhistory`
+-- AUTO_INCREMENT for table `adminhistory`
 --
 ALTER TABLE `adminhistory`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'History ID';
 
 --
--- Tablo için AUTO_INCREMENT değeri `category`
+-- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Category ID', AUTO_INCREMENT=4;
 
 --
--- Tablo için AUTO_INCREMENT değeri `comment`
+-- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Comment ID';
 
 --
--- Tablo için AUTO_INCREMENT değeri `gallery`
+-- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Gallery ID';
 
 --
--- Tablo için AUTO_INCREMENT değeri `mailsubscription`
+-- AUTO_INCREMENT for table `mailsubscription`
 --
 ALTER TABLE `mailsubscription`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Subscription ID';
 
 --
--- Tablo için AUTO_INCREMENT değeri `media`
+-- AUTO_INCREMENT for table `media`
 --
 ALTER TABLE `media`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Media ID';
 
 --
--- Tablo için AUTO_INCREMENT değeri `messages`
+-- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Message ID';
 
 --
--- Tablo için AUTO_INCREMENT değeri `messagetype`
+-- AUTO_INCREMENT for table `messagetype`
 --
 ALTER TABLE `messagetype`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Message Type ID';
 
 --
--- Tablo için AUTO_INCREMENT değeri `news`
+-- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'News ID';
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'News ID', AUTO_INCREMENT=2;
 
 --
--- Tablo için AUTO_INCREMENT değeri `newstype`
+-- AUTO_INCREMENT for table `newstype`
 --
 ALTER TABLE `newstype`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'News Type ID', AUTO_INCREMENT=3;
 
 --
--- Tablo için AUTO_INCREMENT değeri `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'User ID';
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'User ID', AUTO_INCREMENT=2;
 
 --
--- Tablo için AUTO_INCREMENT değeri `usersarchive`
+-- AUTO_INCREMENT for table `usersarchive`
 --
 ALTER TABLE `usersarchive`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Archive ID';
 
 --
--- Dökümü yapılmış tablolar için kısıtlamalar
+-- Constraints for dumped tables
 --
 
 --
--- Tablo kısıtlamaları `adminhistory`
+-- Constraints for table `adminhistory`
 --
 ALTER TABLE `adminhistory`
   ADD CONSTRAINT `adminhistory_ibfk_1` FOREIGN KEY (`adminID`) REFERENCES `admin` (`ID`),
   ADD CONSTRAINT `adminhistory_ibfk_2` FOREIGN KEY (`newsID`) REFERENCES `news` (`ID`);
 
 --
--- Tablo kısıtlamaları `comment`
+-- Constraints for table `comment`
 --
 ALTER TABLE `comment`
   ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`newsID`) REFERENCES `news` (`ID`),
   ADD CONSTRAINT `comment_ibfk_2` FOREIGN KEY (`authorID`) REFERENCES `user` (`ID`);
 
 --
--- Tablo kısıtlamaları `gallery`
+-- Constraints for table `gallery`
 --
 ALTER TABLE `gallery`
   ADD CONSTRAINT `gallery_ibfk_1` FOREIGN KEY (`newsID`) REFERENCES `news` (`ID`);
 
 --
--- Tablo kısıtlamaları `mailsubscription`
+-- Constraints for table `mailsubscription`
 --
 ALTER TABLE `mailsubscription`
   ADD CONSTRAINT `mailsubscription_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `user` (`ID`);
 
 --
--- Tablo kısıtlamaları `media`
+-- Constraints for table `media`
 --
 ALTER TABLE `media`
   ADD CONSTRAINT `media_ibfk_1` FOREIGN KEY (`newsID`) REFERENCES `news` (`ID`);
 
 --
--- Tablo kısıtlamaları `messages`
+-- Constraints for table `messages`
 --
 ALTER TABLE `messages`
   ADD CONSTRAINT `messages_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `user` (`ID`),
   ADD CONSTRAINT `messages_ibfk_2` FOREIGN KEY (`typeID`) REFERENCES `messagetype` (`ID`);
 
 --
--- Tablo kısıtlamaları `news`
+-- Constraints for table `news`
 --
 ALTER TABLE `news`
   ADD CONSTRAINT `news_ibfk_1` FOREIGN KEY (`categoryID`) REFERENCES `category` (`ID`),
@@ -465,7 +479,7 @@ ALTER TABLE `news`
   ADD CONSTRAINT `news_ibfk_3` FOREIGN KEY (`authorID`) REFERENCES `user` (`ID`);
 
 --
--- Tablo kısıtlamaları `usersarchive`
+-- Constraints for table `usersarchive`
 --
 ALTER TABLE `usersarchive`
   ADD CONSTRAINT `usersarchive_ibfk_1` FOREIGN KEY (`newsID`) REFERENCES `news` (`ID`),
