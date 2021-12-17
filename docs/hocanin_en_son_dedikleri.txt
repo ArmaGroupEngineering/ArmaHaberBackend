@@ -117,3 +117,6 @@ haberler:
 
   fail bildiğimiz hata, error bilinemeyen hata
 
+*** 17-12-2021 Cuma
+  authentication içinde bir akış şeması ekle, token'i kontrol etme haftasonu kodları artık yazmak lazım user authentication kısımları vs token alma kısımlarını yapmamız lazımmış
+
