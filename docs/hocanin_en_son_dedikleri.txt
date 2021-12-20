@@ -97,3 +97,26 @@ haberler:
   çarşambaya kadar rest client yapısı oluşturmaya çalış herkes kendi yapısını kursun
 
 
+*** 16-12-2021 Perşembe
+  akış şeması üzerinden login kısmında ne tür işlemler olacak onları da girmemiz lazım
+  kullanıcı giriş yapmış token'i aktif ise sayfaya yönlendir, aktif değilse giriş yap sayfasına yönlendir token'i tekrardan ayarla
+
+  login, register komple ayrı olacak. DB'den kontrol kısımları vs KOMPLE AYRI.. fail mesajlarını burda da komple kullanacağız
+
+  giriş yapan kullanıcıdan gelen token'i db'den kontrol edeceğiz eğer db'de varsa giriş yaptır. expire ise kullanıcıyı giriş yaptır
+
+  anasayfa diye bir şey yok bizde isteklere göre şemalar çizilecek, anasayfa, kategoriler bilmem ne kısımlarını biz düşünmeyeceğiz.
+
+  Furkan ve benim(berkay) benzer olarak yaptığımız akış şemalarını beğendi hoca onun tarzında yapmamız gerekiyor
+
+  tüm incik boncuk servislerin şeması olacak.
+
+  response kısmında status kodu'da eklenmeli, kendi statıs kodumuz,
+
+  status success, fail, error
+
+  fail bildiğimiz hata, error bilinemeyen hata
+
+*** 17-12-2021 Cuma
+  authentication içinde bir akış şeması ekle, token'i kontrol etme haftasonu kodları artık yazmak lazım user authentication kısımları vs token alma kısımlarını yapmamız lazımmış
+
